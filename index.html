@@ -1,1 +1,530 @@
-...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALU Bus - African Leadership University Transportation</title>
+  <style>
+    /* === Base Styles === */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb; /* Tailwind's bg-gray-50 */
+  color: #333;
+}
+
+/* === Colors === */
+.text-alu-blue {
+  color: #1e3a8a;
+}
+
+.text-alu-red {
+  color: #e4002b;
+}
+
+.bg-alu-red {
+  background-color: #e4002b;
+}
+
+.bg-alu-blue {
+  background-color: #1e3a8a;
+}
+
+/* === Navigation Styles === */
+.menu-bar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 10px 5px;
+}
+
+.menu-bar .program {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 0rem;
+  margin-left: 1.5rem;
+  border-radius: 5px;
+}
+.menu-bar h1 {
+  font-size: 0.8rem;
+  color: #1e3a8a;
+  font-weight: bold;
+
+}
+
+.menu-bar a {
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  transition: color 0.3s;
+}
+
+.menu-bar a:hover {
+  color: #e4002b;
+}
+
+.bg-gray-100 {
+  background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
+  padding: 5rem 0;
+  text-align: center;
+  font-weight: 100;
+}
+.bg-gray-100 h1 {
+  font-size: 3rem;
+  color: #1e3a8a;
+}
+
+/* === Section Containers === */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px 1rem;
+}
+
+/* === Headings & Paragraphs === */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1e3a8a;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  color: #4b5563; /* Tailwind's text-gray-600 */
+  margin-bottom: 1rem;
+}
+
+/* === Buttons === */
+button {
+  background-color: #da0229;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #99011d;
+}
+
+/* === Toggle Button Wrapper === */
+.toggle-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* === Glass Card Style === */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+}
+.glass-card h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.glass-card p {
+  font-size: 1rem;
+  color: #4b5563; /* Tailwind's text-gray-600 */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* === Progress Ring === */
+.progress-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 1rem auto;
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: #e5e7eb; /* Tailwind's gray-200 */
+  stroke-width: 10;
+}
+
+.progress-ring circle.progress-ring {
+  fill: none;
+  stroke: #1e3a8a;
+  stroke-width: 10;
+  stroke-dasharray: 282.6;
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.35s;
+}
+
+.progress-ring-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+/* === Route Stop List === */
+#route-stop-list {
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+
+.container1 {
+  max-width: 1280px;
+  display: block;
+  background-attachment: fixed;
+  background-color: #00205B;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === Footer === */
+footer {
+  font-size: 0.875rem;
+}
+
+footer h3 {
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer .bg-alu-red {
+  background-color: #a53c5000;
+  color: rgba(255, 255, 255, 0.541);
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.25rem;
+}
+
+footer .text-gray-400 {
+  color: #9ca3af;
+}
+
+footer .hover\:text-white:hover {
+  color: white;
+}
+
+footer .filter {
+  filter: brightness(0) invert(1);
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .menu-bar .program {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .toggle-buttons {
+    flex-direction: column;
+  }
+}
+.text-gray-400 {
+  color: #9ca3af; /* Tailwind's text-gray-400 */
+  font-size: 0.875rem;
+}
+.glass-card1 {
+  background: rgba(255, 255, 255, 0);
+  padding-bottom: 0rem;
+  font-size: 1rem;
+}
+.border-t {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2rem;
+}
+.text-center {
+  text-align: center;
+  margin-bottom: 0rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #eef3ff;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  padding-bottom: 0rem;
+  margin-top: 0rem;
+  justify-content: space-between;
+}
+.container2 {
+  max-width: 1024px;
+  text-align: center;
+  margin-left: 8rem;
+}
+.container2 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+.aim {
+  font-size: 0.8rem;
+    color: #1e3a8a;
+    font-weight: bold;
+    margin-right: 48rem;
+}
+.container3 {
+  max-width: 1024px;
+}
+.container3 h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-left: 17rem;
+}
+.container3 .glass-card {
+  background: rgba(201, 0, 0, 0.744);
+}
+  
+  </style>
+</head>
+
+<body>
+    <section>
+        <nav class="menu-bar sticky top-0 z-50">
+        <div class="program mx-auto px-4 sm:px-6 lg:px-8">
+            <img src="https://www.alxafrica.com/wp-content/uploads/2024/07/logo-ALU.svg" alt="ALU Logo" class="logo" />
+            <h1 class="aim">ALU Bus Service</h1>
+            <div class="flex items-center justify-between">
+                        <a href="#home" class="text-alu-blue hover:text-alu-red px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#routes" class="text-gray-700 hover:text-alu-red px-3 py-2 text-sm font-medium transition-colors">Routes</a>
+                        <a href="#current-stop" class="text-gray-700 hover:text-alu-red px-3 py-2 text-sm font-medium transition-colors">Schedule</a>
+                        <a href="#contact" class="text-gray-700 hover:text-alu-red px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+        </div>
+        </nav>
+    </section>
+    <section id="home" class="bg-gray-100 py-8">
+        <div class="container">
+            <h1 class="title">Welcome to ALU Bus Service</h1>
+            <p class="paragraph">Connecting students across campuses with reliable transportation.</p>
+            <div class="toggle-buttons">
+                <button onclick="switchRole('student')">Student</button>
+                <button onclick="switchRole('admin')">Admin</button>
+    </div>
+        </div>
+    </section>
+    <section id="role-section" class="container">
+        <!-- Content will be injected based on role -->
+    </section>
+    <section id="capacity" class="bg-white py-8">
+        <div class="container">
+        <div class="glass-card">
+            <h2 class="title">Bus Capacity</h2>
+            <p class="paragraph">Twenty five seats are available in this bus</p>
+            <div class="progress-ring" aria-label="Bus occupancy progress" role="progressbar">
+                <svg width="120" height="120">
+                    <circle class="progress-ring-bg" r="45" cx="60" cy="60"></circle>
+                    <circle class="progress-ring" r="45" cx="60" cy="60"></circle>
+                </svg>
+                 <div class="progress-ring-text" id="seat-count-text">0/25</div>
+        </div>
+        <div class="toggle-buttons">
+          <button onclick="checkIn()">Check In</button>
+          <button onclick="checkOut()">Check Out</button>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="container2" id="current-stop">
+        <h2>Current Bus Stop</h2>
+        <p id="current-stop"></p>
+        <button id="next-stop-btn" class="btn">Move to Next Stop</button>
+    </section>
+    <section id="routes" class="container3">
+            <h2 class="title">Bus Route Progress</h2>
+            <div id="map" style="height: 400px; border-radius: 12px; margin: 2rem 0;"></div>
+    </section>
+    <section>
+    <footer id="contact" class="container1">
+        <div class="footer-content">
+        <div class="program mx-auto px-4 sm:px-6 lg:px-8">
+            <img src="https://www.alxafrica.com/wp-content/uploads/2024/07/logo-ALU.svg" alt="ALU Logo" class="logo">
+            <span class="text-lg font-bold">Bus Service</span>
+            <p class="text-gray-400">Connecting ALU community with safe and reliable transportation</p>
+        </div>
+                    
+        <div class="glass-card1">
+             <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-gray-400">
+                     <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                     <li><a href="#routes" class="hover:text-white transition-colors">Routes</a></li>
+                     <li><a href="#Current-stop" class="hover:text-white transition-colors">Current stop</a></li>
+                    </ul>
+                </div>
+                <div class="glass-card1">
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📞 +250 123 456 789</li>
+                        <li>✉️ bus@alu.edu</li>
+                        <li>📍 ALU Campus, Kigali</li>
+                        <li>🕒 Mon-Fri:7AM-9PM</li>
+                    </ul>
+                </div>
+                <div class="glass-card1">
+                    <h3 class="text-lg font-semibold mb-4">Emergency</h3>
+                    <div class="bg-alu-red p-4 rounded-lg">
+                        <p class="font-semibold">24/7 Emergency Line</p>
+                        <p class="text-lg">+250 911 000 000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 African Leadership University Bus Service. All rights reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+    </section>
+</body>
+<script>
+  // Smooth scrolling for in-page anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Book Now / Booking buttons
+  document.querySelectorAll('button').forEach(button => {
+    if (button.textContent.toLowerCase().includes('book')) {
+      button.addEventListener('click', () => {
+        alert('Booking system coming soon! Please call +250 123 456 789 to reserve your seat.');
+      });
+    }
+  });
+
+  
+
+  // Role switching logic (Student / Admin)
+  function switchRole(role) {
+    const roleSection = document.getElementById('role-section');
+    roleSection.innerHTML = ''; // Clear previous content
+
+    if (role === 'student') {
+      roleSection.innerHTML = `
+        <div class="container glass-card">
+          <h2 class="title">Welcome, Student!</h2>
+          <p class="paragraph">Check-in and you can be able to track your bus in real-time and stay informed.</p>
+        </div>`;
+    } else if (role === 'admin') {
+      roleSection.innerHTML = `
+        <div class="container glass-card">
+          <h2 class="title">Admin Dashboard</h2>
+          <p class="paragraph">Monitor routes, check capacity, and manage bus stops.</p>
+        </div>`;
+    }
+  }
+
+  // Simulate seat filling progress
+  const totalSeats = 25;
+    let bookedSeats = 18;
+    const progressCircle = document.querySelector('circle.progress-ring');
+    const progressText = document.getElementById('seat-count-text');
+
+    function updateRing() {
+      const radius = progressCircle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+      const offset = circumference - (bookedSeats / totalSeats) * circumference;
+      progressCircle.style.strokeDasharray = `${circumference}`;
+      progressCircle.style.strokeDashoffset = offset;
+      progressText.textContent = `${bookedSeats}/${totalSeats}`;
+    }
+
+    function checkIn() {
+      if (bookedSeats < totalSeats) {
+        bookedSeats++;
+        updateRing();
+      } else {
+        alert("Bus is full!");
+      }
+    }
+
+    function checkOut() {
+      if (bookedSeats > 0) {
+        bookedSeats--;
+        updateRing();
+      }
+    }
+
+    if (progressCircle && progressText) updateRing();
+
+  // Route stop simulation
+  const stops = ['Gikondo', 'Rwandex', 'Sonatube', 'Remera', 'Kimironko', 'Zindiro', 'ALU Campus'];
+  let currentStopIndex = 0;
+  const stopDisplay = document.querySelector('#current-stop p');
+  const nextBtn = document.getElementById('next-stop-btn');
+
+  function updateStop() {
+    if (stopDisplay) {
+      stopDisplay.textContent = stops[currentStopIndex] || "End of Route";
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentStopIndex < stops.length - 1) {
+        currentStopIndex++;
+        updateStop();
+      } else {
+        alert("You have reached the final stop.");
+      }
+    });
+  }
+  
+
+  // Initialize first stop
+  updateStop();
+</script>
