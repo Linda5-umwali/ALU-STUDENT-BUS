@@ -104,10 +104,10 @@ I verified that the servers are running with curl (curl -I <web-IP>)
 and finally checked in lb-01 the functionalitty of the servers using 
 "curl http://localhost" and got my results shown in the screenshoot1.
 
-![screenshot1](screenshots/screenshot1.png)
+![screenshot1](screenshot1.png)
 
 # View demo video of how the app works
-[view the demo video](media/demo.mp4)
+[view the demo video](demo.mp4)
 
 
  
