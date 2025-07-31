@@ -108,6 +108,8 @@ and finally checked in lb-01 the functionalitty of the servers using
 
 # View demo video of how the app works
 [view the demo video](demo.mp4)
+or 
+[Click here to watch the demo on youtube](https://youtu.be/5Y1vNGmw1pQ?feature=shared)
 
 
  
