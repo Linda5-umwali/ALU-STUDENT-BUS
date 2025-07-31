@@ -6,17 +6,17 @@ This will be doing the following:
 
 - Letting people check-in when they get in the bus in the morning, to help track the number of people who are in the bus till it is full.
 
-#It will show the current location of the bus to let people know when to get to the next bus stops where we usually stop. 
+- It will show the current location of the bus to let people know when to get to the next bus stops where we usually stop. 
 
 - It will show the bus on map, to let people know the exact time when it will reach their spot.
 
 # Problems I'm hoping this will solve.
 
-#leaving people behing because of mis-information of where the bus is.
+- leaving people behing because of mis-information of where the bus is.
 
 - As the number of the users is increasing everyday as people are knowing about this new bus that started operating weeks ago, It is leaving people behind because it get filled when we haven't even reached Zindiro((one of the bus stops), This could help a direct schedule of the second round to get everyone.
 
-#I hope to help fix the issue of poor time managent by providing exact time the bus will come and the expected time it will reach it's destination using map and traffic tracking.
+- I hope to help fix the issue of poor time managent by providing exact time the bus will come and the expected time it will reach it's destination using map and traffic tracking.
 
 # key features:
 - Student check-in when boarding
@@ -73,34 +73,35 @@ This project uses the Mapbox JavaScript API on the free tier. All rights and dat
 
 This deployment includes 
 
-1.Web01(The first standard web server) : Hosts the application
+1. Web01(The first standard web server) : Hosts the application
 
-2.Web02(Second standard web server) : hosts the application
+2. Web02(Second standard web server) : hosts the application
 
-3.Lb01(load balancer forwarding traffic to web01 and web02) : haproxy load balancer.
+3. Lb01(load balancer forwarding traffic to web01 and web02) : haproxy load balancer.
 
 
 This project deploys a simple web application to two web servers ans uses haproxy on a load balancer to distribute incoming traffic between them.
 
 *Deployment steps*
 
-I installed nginx on both web-01  and web-02 (sudo apt install nginx && sudo apt update)
+I installed nginx on both web-01 and web-02 (sudo apt install nginx && sudo apt update)
 
 And installed haproxy in my load balancer 
 (sudo apt install haproxy)
+
 then edited haproxy config file using 
 (sudo nano /etc/haproxy/haproxy.cfg)
 # edited things below
-*frontend http_front*
-*backend http_back*
+- frontend http_front
+- backend http_back
 
-then restarted the file and finally tested. curl http://localhost
+then restarted the file and finally tested using curl http://localhost
 
 and deplyoyed my app file(index.html) to var/www/html
 
 I verified that the servers are running with curl (curl -I <web-IP>)
 and finally checked in lb-01 the functionalitty of the servers using 
-*curl http://localhost* and got my results shown in the screenshoot1.
+"curl http://localhost" and got my results shown in the screenshoot1.
 
 ![screenshot1](screenshots/screenshot1.png)
 
