@@ -91,7 +91,8 @@ And installed haproxy in my load balancer
 
 then edited haproxy config file using 
 (sudo nano /etc/haproxy/haproxy.cfg)
-# edited things below
+
+*edited things below*
 - frontend http_front
 - backend http_back
 
@@ -105,6 +106,7 @@ and finally checked in lb-01 the functionalitty of the servers using
 
 ![screenshot1](screenshots/screenshot1.png)
 
+# View demo video of how the app works
 [view the demo video](media/demo.mp4)
 
 
