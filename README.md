@@ -1,6 +1,6 @@
 # ALU-STUDENT-BUS
 # Overview 
-The main task was to create a simple yet useful app . Thats why I propose the idea of ALU student Bus Service.
+The main task was to create a simple yet useful app . Thats why I propose the idea of ALU student Bus Service. A simple app but so relevant to us bus users.
 This will be used to inform us where and when the school bus is coming.
 This will be doing the following:
 
